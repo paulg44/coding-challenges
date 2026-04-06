@@ -14,5 +14,12 @@ class Program
             byte[] bytes = File.ReadAllBytes(fileName);
             Console.WriteLine($"{bytes.Length} {fileName}");
         }
+
+        // Step 2
+        if (flag == "-l")
+        {
+            string[] lines = File.ReadAllLines(fileName);
+            Console.WriteLine($"{lines.Length} {fileName}");
+        }
     }
 }
