@@ -21,5 +21,13 @@ class Program
             string[] lines = File.ReadAllLines(fileName);
             Console.WriteLine($"{lines.Length} {fileName}");
         }
+
+         // Step 3
+        if (flag == "-w")
+        {
+            string text = File.ReadAllText(fileName);
+            string[] words = text.Split(new char[] {' ', '\n', '\r', '\t'}, StringSplitOptions.RemoveEmptyEntries);
+            Console.WriteLine($"{words.Length} {fileName}");
+        }
     }
 }
